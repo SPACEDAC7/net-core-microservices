@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vIfdrh+Ae39tr92FOgOJZi4TginOtQWl2sTKYUDj+phReV4+e6R+nx5Hl+5BoM2bCxWZL1NVMaW9+rvwK1zveQ==",
+  "success": true,
+  "projectFilePath": "D:\\DOCS\\Projects\\net-core-microservices\\src\\Actio.Common\\Actio.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
