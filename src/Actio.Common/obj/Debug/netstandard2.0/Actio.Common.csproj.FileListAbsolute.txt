@@ -2,7 +2,6 @@ D:\DOCS\Projects\net-core-microservices\src\Actio.Common\bin\Debug\netstandard2.
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\bin\Debug\netstandard2.0\Actio.Common.dll
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\bin\Debug\netstandard2.0\Actio.Common.pdb
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\obj\Debug\netstandard2.0\Actio.Common.csprojAssemblyReference.cache
-D:\DOCS\Projects\net-core-microservices\src\Actio.Common\obj\Debug\netstandard2.0\Actio.Common.csproj.CoreCompileInputs.cache
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\obj\Debug\netstandard2.0\Actio.Common.AssemblyInfoInputs.cache
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\obj\Debug\netstandard2.0\Actio.Common.AssemblyInfo.cs
 D:\DOCS\Projects\net-core-microservices\src\Actio.Common\obj\Debug\netstandard2.0\Actio.Common.dll
