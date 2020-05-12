@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Actio.Common.Events
 {
-    interface IEvent
+    public interface IEvent
     {
     }
 }

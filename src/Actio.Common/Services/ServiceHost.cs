@@ -1,5 +1,6 @@
 ﻿using Actio.Common.Commands;
 using Actio.Common.Events;
+using Actio.Common.RabbitMq;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.WebUtilities;
@@ -77,7 +78,7 @@ namespace Actio.Common.Services
 
             public BusBuilder SubscribeToCommand<TCommand>() where TCommand: ICommand
             {
-                var handler = webHost.Services.GetService(typeof(ICommandHandler<TCommand>));
+                var handler = (ICommandHandler<TCommand>)webHost.Services.GetService(typeof(ICommandHandler<TCommand>));
 
                 bus.WithCommandHandlerAsync(handler);
 
@@ -86,9 +87,9 @@ namespace Actio.Common.Services
 
             public BusBuilder SubscribeToEvent<TEvent>() where TEvent : IEvent
             {
-                var handler = webHost.Services.GetService(typeof(IEventHandler<TEvent>));
+                var handler = (IEventHandler<TEvent>)webHost.Services.GetService(typeof(IEventHandler<TEvent>));
 
-                bus.WithCommandHandlerAsync(handler);
+                bus.WithEventHandlerAsync(handler);
 
                 return this;
             }
