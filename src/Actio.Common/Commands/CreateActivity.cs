@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Actio.Common.Commands
 {
-    class CreateActivity : IAuthenticatedCommand
+    public class CreateActivity : IAuthenticatedCommand
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
