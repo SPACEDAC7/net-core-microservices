@@ -23,7 +23,6 @@ namespace Actio.Services.Identity.Handlers
             Console.WriteLine($"Creating activity: {command.Name}");
             await this.busClient.PublishAsync(new ActivityCreated(command.Id,
                 command.UserId, command.Category, command.Name));
-            throw new NotImplementedException();
         }
     }
 }
