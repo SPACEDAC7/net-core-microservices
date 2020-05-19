@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Actio.Common.Commands;
+using Actio.Common.Mongo;
 using Actio.Common.RabbitMq;
 using Actio.Services.Identity.Handlers;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,7 @@ namespace Actio.Services.Activities
         {
             services.AddControllers();
             services.AddRabbitMq(Configuration);
+            services.AddMongoDB(Configuration);
             services.AddSingleton<ICommandHandler<CreateActivity>, CreateActivityHandler>();
         }
 
