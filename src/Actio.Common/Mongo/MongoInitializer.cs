@@ -14,9 +14,12 @@ namespace Actio.Common.Mongo
         private readonly bool seed;
         private readonly IMongoDatabase database;
 
-        public MongoInitializer(IMongoDatabase database, IOptions<MongoOptions> options)
+        public readonly IDatabaseSeeder databaseSeeder;
+
+        public MongoInitializer(IMongoDatabase database, IDatabaseSeeder databaseSeeder, IOptions<MongoOptions> options)
         {
             this.database = database;
+            this.databaseSeeder = databaseSeeder;
             this.seed = options.Value.Seed;
         }
 
@@ -32,6 +35,8 @@ namespace Actio.Common.Mongo
             {
                 return;
             }
+
+            await this.databaseSeeder.SeedAsync();
 
         }
 
