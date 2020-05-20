@@ -17,7 +17,7 @@ namespace Actio.Services.Activities.Domain.Models
         public Guid UserId { get; protected set; }
         public DateTime CreatedAt { get; protected set; }
 
-        protected Activity()
+        public Activity()
         {
         }
 
@@ -35,5 +35,11 @@ namespace Actio.Services.Activities.Domain.Models
             UserId = userId;
             CreatedAt = createdAt;
         }
+
+        public override string ToString()
+        {
+            return $"Id - {this.Id}, Name - {this.Name}, Category - {this.Category}, Description - {this.Description}, UserId - {this.UserId}, CreatedAt - {this.CreatedAt}";
+        }
     }
+
 }

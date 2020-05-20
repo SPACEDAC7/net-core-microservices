@@ -13,10 +13,15 @@ namespace Actio.Common.Mongo
 
         public static void AddMongoDB(this IServiceCollection services, IConfiguration configuration)
         {
+
+            Console.WriteLine("We are in add mongoDb");
             services.Configure<MongoOptions>(configuration.GetSection("mongo"));
             services.AddSingleton<MongoClient>(c =>
             {
                 var options = c.GetService<IOptions<MongoOptions>>();
+
+                Console.WriteLine($"Options -> {options.Value.ConnectionString}");
+
                 return new MongoClient(options.Value.ConnectionString);
             });
 

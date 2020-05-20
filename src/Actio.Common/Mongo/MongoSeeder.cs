@@ -19,6 +19,7 @@ namespace Actio.Common.Mongo
 
         public async Task SeedAsync()
         {
+            Console.WriteLine("Mongo Seeder - send async");
             var collectionCursor = await this.database.ListCollectionsAsync();
             var collections = await collectionCursor.ToListAsync();
 
@@ -31,6 +32,7 @@ namespace Actio.Common.Mongo
 
         protected virtual async Task CustomSeedAsync()
         {
+            Console.WriteLine("Mongo Seeder - custom send async");
             await Task.CompletedTask;
         }
     }

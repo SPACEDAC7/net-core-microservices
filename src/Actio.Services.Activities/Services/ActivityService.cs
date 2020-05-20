@@ -21,13 +21,18 @@ namespace Actio.Services.Activities.Services
 
         public async Task AddAsync(Guid id, Guid userId, string category, string name, string description, DateTime createdAt)
         {
-            var activityCategory = await this.categoryRepository.GetAsync(name);
+            Console.WriteLine($"Activity Service: Data - {category} - {name} - {userId} - {id} -{description}");
 
-            if(activityCategory == null)
+            var activityCategory = await this.categoryRepository.GetAsync(category);
+
+            Console.WriteLine($"ActivityCategory -> {activityCategory}");
+
+            if (activityCategory == null)
             {
                 throw new ActioException("category_not_found", $"Category: {category} was not found.");
             }
             var activity = new Activity(id, name, activityCategory, description, userId, createdAt);
+            Console.WriteLine(activity.ToString());
             await this.activityRepository.AddAsync(activity);
         }
     }

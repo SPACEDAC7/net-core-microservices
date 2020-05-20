@@ -55,6 +55,7 @@ namespace Actio.Services.Activities
             app.UseRouting();
 
             app.UseAuthorization();
+            Console.WriteLine("Configure");
             app.ApplicationServices.GetService<IDatabaseInitializer>().InitializeAsync();
             app.UseEndpoints(endpoints =>
             {

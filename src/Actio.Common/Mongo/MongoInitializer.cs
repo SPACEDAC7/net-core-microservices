@@ -25,7 +25,8 @@ namespace Actio.Common.Mongo
 
         public async Task InitializeAsync()
         {
-            if (!this.initialized)
+            Console.WriteLine($"InitializeAsync : {this.initialized}");
+            if (this.initialized)
             {
                 return;
             }
