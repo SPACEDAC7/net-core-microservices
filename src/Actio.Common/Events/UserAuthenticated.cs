@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Actio.Common.Events
 {
-    class UserAuthenticated: IEvent
+    public class UserAuthenticated: IEvent
     {
 
         public string Email { get; }

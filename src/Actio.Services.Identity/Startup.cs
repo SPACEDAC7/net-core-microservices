@@ -1,3 +1,4 @@
+using Actio.Common.Auth;
 using Actio.Common.Commands;
 using Actio.Common.Mongo;
 using Actio.Common.RabbitMq;
@@ -30,6 +31,7 @@ namespace Actio.Services.Identity
             services.AddControllers();
             services.AddRabbitMq(Configuration);
             services.AddMongoDB(Configuration);
+            services.AddJwt(Configuration);
             services.AddScoped<ICommandHandler<CreateUser>, CreateUserHandler>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();

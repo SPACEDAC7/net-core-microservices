@@ -1,4 +1,5 @@
-﻿using Actio.Common.Exceptions;
+﻿using Actio.Common.Auth;
+using Actio.Common.Exceptions;
 using Actio.Services.Identity.Domain.Repository;
 using Actio.Services.Identity.Domain.Services;
 using System;
@@ -12,16 +13,20 @@ namespace Actio.Services.Identity.Services
     {
         private readonly IUserRepository userRepository;
         private readonly IEncryter encryter;
+        private readonly IJwtHandler jwtHandler;
 
-        public UserService(IUserRepository userRepository, IEncryter encryter)
+        public UserService(IUserRepository userRepository, IEncryter encryter, IJwtHandler jwtHandler)
         {
             this.userRepository = userRepository;
             this.encryter = encryter;
+            this.jwtHandler = jwtHandler;
         }
 
-        public async Task LoginAsync(string email, string password)
+        public async Task<JsonWebToken> LoginAsync(string email, string password)
         {
             var user = await this.userRepository.GetAsync(email);
+
+            Console.WriteLine($"User got - {user.Email} , {user.Password}");
 
             if (user == null)
             {
@@ -32,6 +37,8 @@ namespace Actio.Services.Identity.Services
             {
                 throw new ActioException("invalid_credentials", $"Invalid credentials");
             }
+
+            return this.jwtHandler.Create(user.Id);
         }
 
         public async Task RegisterAsync(string email, string password, string name)
