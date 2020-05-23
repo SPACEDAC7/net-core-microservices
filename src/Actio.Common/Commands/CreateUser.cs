@@ -9,10 +9,4 @@ public class CreateUser : ICommand
 	public string Password { get; set; }
 	public string Name { get; set; }
 
-	public CreateUser()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
 }

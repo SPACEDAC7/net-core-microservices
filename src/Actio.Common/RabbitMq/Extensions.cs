@@ -6,13 +6,17 @@ using Actio.Common.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using RawRabbit.Instantiation;
+using System;
 
 namespace Actio.Common.RabbitMq
 {
     public static class Extensions
     {
         public static Task WithCommandHandlerAsync<TCommand>(this IBusClient bus, ICommandHandler<TCommand> handler) where TCommand : ICommand 
-            => bus.SubscribeAsync<TCommand>(msg => handler.HandleAsync(msg),
+            => bus.SubscribeAsync<TCommand>(msg => {
+                Console.WriteLine($"I receve this message {msg}");
+                return handler.HandleAsync(msg);
+            },
                 ctx => ctx.UseSubscribeConfiguration(cfg => cfg.FromDeclaredQueue(q => q.WithName(GetQueueName<TCommand>()))));
 
         public static Task WithEventHandlerAsync<TEvent>(this IBusClient bus, IEventHandler<TEvent> handler) where TEvent : IEvent

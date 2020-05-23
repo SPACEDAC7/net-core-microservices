@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Actio.Common.Events
 {
-    class CreatedUserRejected: IRejectedEvent
+    public class CreatedUserRejected: IRejectedEvent
     {
         public string Reason { get; }
 
