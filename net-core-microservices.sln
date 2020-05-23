@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actio.Services.Identity", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actio.Services.Activities", "src\Actio.Services.Activities\Actio.Services.Activities.csproj", "{DCAD3AFF-E8B8-41F1-B2BF-CEB631FEB8EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,18 @@ Global
 		{DCAD3AFF-E8B8-41F1-B2BF-CEB631FEB8EC}.Release|x64.Build.0 = Release|Any CPU
 		{DCAD3AFF-E8B8-41F1-B2BF-CEB631FEB8EC}.Release|x86.ActiveCfg = Release|Any CPU
 		{DCAD3AFF-E8B8-41F1-B2BF-CEB631FEB8EC}.Release|x86.Build.0 = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|x64.Build.0 = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C0CC7A8-BF11-4EBE-ADD6-3896D853DEAA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E2B416CB-A3AE-4311-99CD-001956FC1366} = {24FA508A-9D46-4E7A-A1CE-0BD2B3036E7D}
